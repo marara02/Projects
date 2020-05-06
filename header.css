@@ -1,0 +1,233 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.animation{
+transition: 1s transform;
+    height: 50px;
+    width: 50px;
+}
+.animation:hover{
+transform:rotate(360deg);
+
+}
+.topnav {
+background-color: #239B56;
+overflow: hidden;
+height: 70px; 
+}
+.topnav > a {
+float: left;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px; 
+color:white;
+font-size:1.3em;
+font-family: 'Bebas Neue', cursive;
+}
+.topnav a:hover {
+color: black;
+}
+
+.topnav a.active {
+background-color: #4CAF50;
+color: white;
+}
+.topnav button {
+float: left;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+color:white;
+font-size:1.3em;
+font-family: 'Bebas Neue', cursive;
+border: none;
+}
+.topnav button:hover {
+background-color: #1D8348;
+color: black;
+}
+.home{
+background-color:#82E0AA;
+color:white;
+font-family: 'Bebas Neue', cursive;
+width:150px;
+height:70px;
+}
+.catalog{
+background-color: #58D68D; 
+font-family: 'Bebas Neue', cursive;
+height: 70px;
+width: 185px;
+}
+.catalogtext{
+font-size: 165%;
+position: absolute;
+top: 18px;
+left: 190px;
+}
+.img{
+  position: absolute;
+  left: 160px;
+  top: 25px;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+
+}
+
+.dropdown .dropbtn {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  margin: 0;
+  background-color: #58D68D; 
+  font-family: 'Bebas Neue', cursive;
+  height: 70px;
+  width: 150px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #2ECC71;
+}
+
+.navbar a {
+  float: left;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #1D8348;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  top: 70px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: bottom;
+}
+
+.dropdown-content a:hover {
+  background-color: #ABEBC6;
+
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.contacts{
+background-color: #2ECC71;
+height: 70px;
+width: 150px;
+}
+.contacttext{
+font-size: 165%;
+position: absolute;
+top: 18px;
+left: 335px;
+}
+.contactimg{
+  position: absolute;
+  top: 8px;
+  left: -25px;
+
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+.log{
+background-color: #28B463;
+height: 70px;
+width: 200px;
+}
+.logtext{
+  font-size: 165%;
+position: absolute;
+top: 18px;
+left: 465px;
+}
+.regtext{
+  font-size: 165%;
+position: absolute;
+top: 18px;
+left: 537px;
+}
+.sign{
+font-size: 165%; 
+position: absolute;
+left: 525px;
+top:18px; 
+}
+.basimg{
+  width:50px;
+  height: 50px;
+  position: absolute;
+  left: 1460px;
+  top: 13px;
+}
+.search{
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  left:890px;
+  top: 10px;
+}
+.sub {
+  height: 50px;
+  width: 75px;
+  position: absolute;
+  top: 10px;
+  left: 1100px;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+}
+
+.sub:hover {background-color: #3e8e41}
+
+.sub:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.footer{
+ position: fixed; /* Фиксированное положение */
+    left: 0; bottom: 0; /* Левый нижний угол */
+    padding: 10px; /* Поля вокруг текста */
+    background: #239B56; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    width: 100%; /* Ширина слоя */}
+}

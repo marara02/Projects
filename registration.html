@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>onlineshop.kz</title>
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Six+Caps&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CSS.css">
+</head>
+
+<body style="background-color:white">
+<header>
+    <div class="topnav">
+        <button class="of" onclick="homeFunction()"><img src="shop.png" class="animation" align="left" width="25"><p style="font-size:185%">Home</p></button>
+        <button class="contacts" onclick="contactsFunction()"><p class="text"> About</p></button>
+        <button class="home" onclick="carsFunction()"><p class="text"> LogIn/Register</p>></button>
+        <button class="sub" onclick="myFunction()"><p class="text"> Subscribe</p></button>
+    </div>
+</header> 
+<hr style="color: white;">
+<div class="main">
+    <form name="form" >
+        <div class="desc">
+            <h1>What can you get</h1>
+            <table>
+                <tr>
+                <th>Prizes</th>
+                </tr>
+                <tr>
+                <td>Special offers<br><br><img src="offer.png" title="car wash" alt="car wash" width="70" height="70"></td>
+                </tr>
+                <tr>
+                <td>Discounts<br><br><img src="disc.png" title="tires" alt="tires" width="50px" height="70px"></td>
+                </tr>
+                <tr>
+                <td>Free delivery<br><br><img src="del.png" title="engine fix" alt="engine fix" width="70px" height="50px"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="f">
+            <h1 style="color: #138D75;">Subscription form</h1>
+            <input type="number" id="num" name="num" placeholder="Card Number">
+            <input type="text" id="holder" name="name" placeholder="Card Holder">
+            <input type="text" class="date" name="date" placeholder="Expire date mm/yy" maxlength="5" minlength="5">
+            <input type="password" class="cvv" name="cvv" placeholder="CVV" maxlength="3" minlength="3">
+            <span style="color: #138D75;">Month</span>
+            <select id="month" name="month" class="month">
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="9">9</option>
+                <option value="12">12</option>
+            </select>
+            <input type="submit" name="submit" id="sub" value="Submit">
+        </div>
+    </form>
+</div>
+<div class="main">
+    <script>
+
+        function myFunction() {
+            location.replace("sub.html")
+        }
+        function homeFunction(){
+            location.replace("nurgissa.html")
+        }
+        function contactFunction(){
+            location.replace("contacts.html")
+        }
+
+        document.getElementById("num").oninput = function() {
+            if (this.value.length > 16) {
+                this.value = this.value.slice(0,16);
+            }
+            else{}
+        }
+        document.querySelector(".date").oninput = function() {
+            if (this.value.length > 5) {
+                this.value = this.value.slice(0,5);
+            }
+            else{}
+
+        }
+        document.querySelector(".cvv").oninput = function() {
+            if (this.value.length > 3) {
+                this.value = this.value.slice(0,3);
+            }
+            else{}
+        }
+
+        document.querySelector("#sub").onclick = function(){
+            var holder = document.getElementById("holder").value;
+            var date = document.querySelector(".date").value;
+            var month = document.getElementById("month").value;
+            var type = document.getElementById("type").value;
+            var number = document.getElementById("num").value;
+            var cvv = document.querySelector(".cvv").value;
+
+            let total;
+            if (number.length==16) {
+                if (holder.length>0) {
+                    if (cvv.length==3) {
+                        if (date.length ==5) {
+                            total = count(month, type);
+                            alert('You successfully subscribed! The price: ' + total + '$');
+                        }
+                        else {
+                            alert('Wrong date of expire!');
+                        }
+                    }
+                    else {
+                        alert('Wrong CVV!');
+                    }
+                }
+                else {
+                    alert('Wrong name!');
+                }
+            }
+            else {
+                alert('Wrong card number!');
+            }
+        }
+
+
+        function count(m, t){
+            const price = 60;
+            switch(t){
+                case "medium":
+                    return price*m;
+                    break;
+
+                case "full":
+                    return price*m*1.5;
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
